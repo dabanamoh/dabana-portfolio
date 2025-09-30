@@ -140,26 +140,40 @@ async function loadFeaturedCaseStudies() {
     `;
     
     try {
-        console.log('Attempting to fetch featured case studies from CMS...');
+        console.log('Loading featured case studies from CMS...');
         
         // Try to load from CMS first
         const cmsData = await window.CMS.loadCaseStudies();
-        const featuredStudies = Object.values(cmsData)
-            .filter(study => study.featured)
-            .map(study => ({
-                ...study,
-                tags: study.technologies ? study.technologies.map(tech => tech.name) : []
-            }));
+        console.log('CMS Data received:', cmsData);
         
-        console.log('Successfully fetched featured case studies from CMS:', featuredStudies);
+        if (cmsData && Object.keys(cmsData).length > 0) {
+            const featuredStudies = Object.values(cmsData)
+                .filter(study => study.featured === true)
+                .map(study => ({
+                    ...study,
+                    tags: study.technologies ? study.technologies.map(tech => tech.name) : [study.category]
+                }));
+            
+            console.log('Featured studies found:', featuredStudies);
+            
+            if (featuredStudies.length > 0) {
+                renderFeaturedCaseStudies(featuredStudies);
+                return;
+            }
+        }
+        
+        // If no CMS data or no featured studies, use static fallback
+        console.log('Using static fallback data...');
+        const featuredStudies = window.caseStudyAPI.getFeaturedCaseStudyCards();
         renderFeaturedCaseStudies(featuredStudies);
-    } catch (error) {
-        console.error('Failed to load featured case studies from CMS:', error);
         
-        // Fallback to static data if available
+    } catch (error) {
+        console.error('Error loading case studies:', error);
+        
+        // Final fallback to static data
         try {
-            const featuredStudies = caseStudyAPI.getFeaturedCaseStudyCards();
-            console.log('Falling back to static data:', featuredStudies);
+            const featuredStudies = window.caseStudyAPI.getFeaturedCaseStudyCards();
+            console.log('Using static API fallback:', featuredStudies);
             renderFeaturedCaseStudies(featuredStudies);
         } catch (fallbackError) {
             console.error('Failed to load fallback data:', fallbackError);
