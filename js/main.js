@@ -204,18 +204,20 @@ function renderFeaturedCaseStudies(caseStudies) {
                     <i class="fas fa-${getCategoryIcon(study.category)}"></i>
                 </div>
             </div>
-            <h3 class="case-title">${study.title}</h3>
-            <p class="case-description">${study.subtitle}</p>
-            <div class="case-metrics">
-                ${study.stats.map(stat => `
-                    <div class="metric">
-                        <span class="metric-value">${stat.number}</span>
-                        <span class="metric-label">${stat.label}</span>
-                    </div>
-                `).join('')}
-            </div>
-            <div class="case-tags">
-                ${study.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+            <div class="case-content">
+                <h3 class="case-title">${study.title}</h3>
+                <p class="case-description">${study.subtitle}</p>
+                <div class="case-metrics">
+                    ${study.stats.slice(0, 2).map(stat => `
+                        <div class="metric">
+                            <span class="metric-value">${stat.number}</span>
+                            <span class="metric-label">${stat.label}</span>
+                        </div>
+                    `).join('')}
+                </div>
+                <div class="case-tags">
+                    ${study.tags.slice(0, 3).map(tag => `<span class="tag">${tag}</span>`).join('')}
+                </div>
             </div>
         `;
         
