@@ -1,0 +1,29 @@
+heroTitle: "Mohammed Dabana"
+heroSubtitle: "PRODUCT MANAGER"
+heroDescription: "Based across Kenya, Ghana & Nigeria, I'm a product manager and design expert."
+heroSecondary: "I build AI automations for businesses and also assist in training AI models for organizations and also recommend uses of AI to make projects faster."
+profileImage: "https://page.gensparksite.com/v1/base64_upload/a5bccebcb8f4a459d1f8d8d1f8c3df49"
+aboutQuote: "You can't use up creativity. The more you use, the more you have in your strategic mind."
+aboutDescription: "Does my creativity have a more complex substance journey and marketplace today process than that because? Consider the number of people who influenced a sale, the length of the decision-making cycle, the complexity intersect of the people who purchase, implement, manage, and use the technology. It's a lot meaningful content flow."
+
+skills:
+  - category: "Product Management"
+    skillsList:
+      - name: "Product Strategy"
+        percentage: 95
+      - name: "Market Research"
+        percentage: 90
+      - name: "Roadmapping"
+        percentage: 98
+      - name: "Performance Coverage"
+        percentage: 85
+  - category: "Design Excellence"
+    skillsList:
+      - name: "Product Design"
+        percentage: 92
+      - name: "Interface Design"
+        percentage: 88
+      - name: "Cost Optimization"
+        percentage: 94
+      - name: "Visual Presentation"
+        percentage: 96

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study Detail - Mohammed Dabana</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/case-study-detail.css">
+    <script src="js/cms-loader.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <a href="index.html" class="logo">MD</a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link" data-current="true">Home</a>
+                <a href="case-studies.html" class="nav-link">Case Studies</a>
+            </div>
+            <div class="nav-actions">
+                <div class="language-toggle">
+                    <span>English</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Case Study Detail Content -->
+    <main class="case-detail-main">
+        <!-- Loading State -->
+        <div id="loading-state" class="loading-container">
+            <div class="container">
+                <div class="loading-content">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Loading case study...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Case Study Content (Hidden initially) -->
+        <div id="case-study-content" class="case-study-content" style="display: none;">
+            
+            <!-- Hero Section -->
+            <section class="case-hero">
+                <div class="container">
+                    <div class="case-hero-content">
+                        <div class="breadcrumb">
+                            <a href="index.html">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="case-studies.html">Case Studies</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span id="breadcrumb-title">Case Study</span>
+                        </div>
+                        
+                        <div class="case-hero-main">
+                            <div class="case-hero-text">
+                                <div class="case-category-badge" id="category-badge">AI Automation</div>
+                                <h1 class="case-hero-title" id="case-title">Case Study Title</h1>
+                                <p class="case-hero-subtitle" id="case-subtitle">Project description</p>
+                                
+                                <div class="project-meta">
+                                    <div class="meta-item">
+                                        <i class="fas fa-building"></i>
+                                        <div>
+                                            <span class="meta-label">Client</span>
+                                            <span class="meta-value" id="client-name">Client Name</span>
+                                        </div>
+                                    </div>
+                                    <div class="meta-item">
+                                        <i class="fas fa-calendar"></i>
+                                        <div>
+                                            <span class="meta-label">Duration</span>
+                                            <span class="meta-value" id="project-duration">6 months</span>
+                                        </div>
+                                    </div>
+                                    <div class="meta-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <div>
+                                            <span class="meta-label">Location</span>
+                                            <span class="meta-value" id="project-location">Ghana</span>
+                                        </div>
+                                    </div>
+                                    <div class="meta-item">
+                                        <i class="fas fa-users"></i>
+                                        <div>
+                                            <span class="meta-label">Team Size</span>
+                                            <span class="meta-value" id="team-size">5 people</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="case-hero-image">
+                                <img id="hero-image" src="" alt="Project Screenshot" class="hero-img" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Project Overview -->
+            <section class="project-overview">
+                <div class="container">
+                    <div class="overview-grid">
+                        <div class="overview-content">
+                            <h2 class="section-title">Project Overview</h2>
+                            <div id="project-overview" class="overview-text">
+                                <!-- Dynamic content loaded here -->
+                            </div>
+                        </div>
+                        
+                        <div class="project-stats">
+                            <h3 class="stats-title">Key Results</h3>
+                            <div id="project-stats" class="stats-grid">
+                                <!-- Dynamic stats loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Challenge & Solution -->
+            <section class="challenge-solution">
+                <div class="container">
+                    <div class="cs-grid">
+                        <div class="challenge-section">
+                            <h3 class="cs-title">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                The Challenge
+                            </h3>
+                            <div id="project-challenge" class="cs-content">
+                                <!-- Dynamic content loaded here -->
+                            </div>
+                        </div>
+                        
+                        <div class="solution-section">
+                            <h3 class="cs-title">
+                                <i class="fas fa-lightbulb"></i>
+                                The Solution
+                            </h3>
+                            <div id="project-solution" class="cs-content">
+                                <!-- Dynamic content loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Project Timeline -->
+            <section class="project-timeline">
+                <div class="container">
+                    <h2 class="section-title">Project Timeline</h2>
+                    <div id="timeline-content" class="timeline">
+                        <!-- Dynamic timeline loaded here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technologies Used -->
+            <section class="technologies">
+                <div class="container">
+                    <h2 class="section-title">Technologies & Tools</h2>
+                    <div id="tech-stack" class="tech-grid">
+                        <!-- Dynamic tech stack loaded here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Project Gallery -->
+            <section class="project-gallery">
+                <div class="container">
+                    <h2 class="section-title">Project Gallery</h2>
+                    <div id="project-images" class="gallery-grid">
+                        <!-- Dynamic gallery loaded here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results & Impact -->
+            <section class="results-impact">
+                <div class="container">
+                    <h2 class="section-title">Results & Impact</h2>
+                    <div class="results-content">
+                        <div id="project-results" class="results-text">
+                            <!-- Dynamic results loaded here -->
+                        </div>
+                        <div class="impact-metrics">
+                            <div id="impact-stats" class="impact-grid">
+                                <!-- Dynamic impact metrics loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Client Testimonial -->
+            <section class="client-testimonial">
+                <div class="container">
+                    <div class="testimonial-content">
+                        <div class="testimonial-card">
+                            <div class="testimonial-quote">
+                                <i class="fas fa-quote-left"></i>
+                                <blockquote id="client-testimonial">
+                                    "Working with Mohammed was exceptional. His expertise in AI automation transformed our customer service operations."
+                                </blockquote>
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="author-info">
+                                    <h4 id="testimonial-name">John Doe</h4>
+                                    <p id="testimonial-role">CEO, TechCorp Ghana</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Related Case Studies -->
+            <section class="related-cases">
+                <div class="container">
+                    <h2 class="section-title">Related Case Studies</h2>
+                    <div id="related-studies" class="related-grid">
+                        <!-- Dynamic related cases loaded here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="case-cta">
+                <div class="container">
+                    <div class="cta-content">
+                        <h2 class="cta-title">Ready to Transform Your Business?</h2>
+                        <p class="cta-description">
+                            Let's discuss how similar solutions can drive results for your organization.
+                        </p>
+                        <div class="cta-actions">
+                            <a href="index.html#contact" class="btn btn-primary">
+                                Book Free Consultation
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="mailto:dabana.mohammed@gmail.com" class="btn btn-secondary">
+                                <i class="fas fa-envelope"></i>
+                                Get In Touch
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Error State -->
+        <div id="error-state" class="error-container" style="display: none;">
+            <div class="container">
+                <div class="error-content">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h2>Case Study Not Found</h2>
+                    <p>The requested case study could not be found.</p>
+                    <a href="case-studies.html" class="btn btn-primary">
+                        View All Case Studies
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo">MD</span>
+                    <p>Product Manager & AI Expert</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="case-studies.html">Case Studies</a>
+                    <a href="mailto:dabana.mohammed@gmail.com">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Mohammed Dabana. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Static Case Studies Data -->
+    <script src="js/case-studies-data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/case-study-detail.js"></script>
+</body>
+</html>

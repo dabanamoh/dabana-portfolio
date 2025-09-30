@@ -1,0 +1,18 @@
+siteTitle: "Mohammed Dabana - Product Manager & AI Expert"
+siteDescription: "Based across Kenya, Ghana & Nigeria, I'm a product manager and design expert specializing in AI automation and business solutions."
+siteUrl: "https://your-portfolio-site.netlify.app"
+
+themeColors:
+  primary: "#007bff"
+  secondary: "#6c757d"
+  accent: "#28a745"
+
+contact:
+  phone: "+254 111 456 789"
+  email: "mohammed@dabana.com"
+  location: "Kenya, Ghana & Nigeria"
+
+social:
+  linkedin: ""
+  twitter: ""
+  github: ""
