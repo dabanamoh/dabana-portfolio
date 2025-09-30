@@ -253,6 +253,54 @@ class CMSContentLoader {
                     { "icon": "fab fa-node-js", "name": "Node.js" },
                     { "icon": "fas fa-shield-alt", "name": "Security" }
                 ]
+            },
+            "process-automation": {
+                "id": "process-automation",
+                "title": "Business Process Automation Suite",
+                "subtitle": "Comprehensive automation system for agricultural data processing that eliminated 30+ hours of manual work weekly and reduced operational costs by 35% for AgriTech Solutions.",
+                "category": "AI Automation",
+                "client": "AgriTech Solutions",
+                "duration": "6 months",
+                "location": "Ghana",
+                "teamSize": "7 people",
+                "heroImage": "images/process-automation/hero.jpg",
+                "featured": true,
+                "date": "2024-05-01T00:00:00.000Z",
+                "stats": [
+                    { "number": "30+", "label": "Hours Saved Weekly" },
+                    { "number": "35%", "label": "Cost Reduction" },
+                    { "number": "95%", "label": "Error Reduction" },
+                    { "number": "5", "label": "Processes Automated" }
+                ],
+                "technologies": [
+                    { "icon": "fab fa-python", "name": "Python" },
+                    { "icon": "fas fa-cogs", "name": "Apache Airflow" },
+                    { "icon": "fas fa-database", "name": "PostgreSQL" }
+                ]
+            },
+            "ux-redesign": {
+                "id": "ux-redesign",
+                "title": "Healthcare Platform UX Redesign",
+                "subtitle": "Comprehensive user experience research and redesign for healthcare booking platform that improved user engagement by 75% and reduced churn rate by 25% for MediConnect Ghana.",
+                "category": "Design & UX",
+                "client": "MediConnect Ghana",
+                "duration": "5 months",
+                "location": "Accra, Ghana",
+                "teamSize": "6 people",
+                "heroImage": "images/ux-redesign/hero.jpg",
+                "featured": true,
+                "date": "2024-04-01T00:00:00.000Z",
+                "stats": [
+                    { "number": "75%", "label": "Engagement Increase" },
+                    { "number": "25%", "label": "Churn Reduction" },
+                    { "number": "50%", "label": "More Appointments" },
+                    { "number": "4.6/5", "label": "User Rating" }
+                ],
+                "technologies": [
+                    { "icon": "fas fa-paint-brush", "name": "Figma" },
+                    { "icon": "fas fa-mobile-alt", "name": "Responsive Design" },
+                    { "icon": "fas fa-universal-access", "name": "Accessibility" }
+                ]
             }
         };
     }
