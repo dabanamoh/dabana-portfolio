@@ -16,7 +16,7 @@ class CMSContentLoader {
         try {
             // For now, we'll use a hybrid approach where we fetch available case studies
             // In a real deployment, this would be handled by a build process or server-side rendering
-            const caseStudyFiles = ['ai-chatbot', 'ecommerce-optimization'];
+            const caseStudyFiles = ['ai-chatbot', 'ecommerce-optimization', 'ml-inventory', 'fintech-mobile'];
             const caseStudies = {};
 
             for (const file of caseStudyFiles) {
