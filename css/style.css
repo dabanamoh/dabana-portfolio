@@ -639,37 +639,34 @@ h1, h2, h3, h4, h5, h6 {
     color: #FFFFFF;
 }
 
-.case-card .case-title,
-.case-card .case-description,
-.case-card .case-metrics,
-.case-card .case-tags {
-    padding: 0 2rem;
-}
+/* Remove individual padding since it's handled by .case-content */
 
 .case-content {
     flex: 1;
     display: flex;
     flex-direction: column;
-    padding: 1.5rem 0;
+    padding: 1.5rem 2rem 2rem 2rem;
 }
 
 .case-card .case-title {
-    padding-top: 0;
+    padding: 0;
     margin-bottom: 1rem;
 }
 
 .case-card .case-description {
+    padding: 0;
     flex: 1;
     margin-bottom: 1.5rem;
 }
 
 .case-card .case-metrics {
+    padding: 0;
     margin-bottom: 1.5rem;
     margin-top: auto;
 }
 
 .case-card .case-tags {
-    padding-bottom: 0;
+    padding: 0;
     margin-top: auto;
 }
 
@@ -703,12 +700,15 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     gap: 1.5rem;
     margin-bottom: 1.5rem;
+    justify-content: space-between;
 }
 
 .metric {
     text-align: center;
     transition: all 0.2s ease;
     cursor: pointer;
+    flex: 1;
+    min-width: 0;
 }
 
 .metric:hover {
@@ -727,17 +727,23 @@ h1, h2, h3, h4, h5, h6 {
 
 .metric-value {
     display: block;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 700;
     color: #FF6B35;
     margin-bottom: 0.25rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .metric-label {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: #A0A0A0;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .case-tags {
