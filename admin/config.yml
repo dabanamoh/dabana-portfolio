@@ -1,14 +1,10 @@
 backend:
-  name: git-gateway
-  branch: main # Branch to update (optional; defaults to master)
+  name: test-repo
 
-# Media and Public folder paths
-media_folder: "images/uploads" # Media files will be stored in the repo under images/uploads
-public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
 
-# Collections define the structure for the different content types on your site
 collections:
-  # Case Studies Collection
   - name: "case_studies"
     label: "Case Studies"
     folder: "content/case-studies"
@@ -17,7 +13,7 @@ collections:
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Subtitle", name: "subtitle", widget: "text"}
-      - {label: "Category", name: "category", widget: "select", options: ["AI Automation", "Product Management", "Design Consultation", "AI Model Training"]}
+      - {label: "Category", name: "category", widget: "select", options: ["AI Automation", "Product Management", "Design Consultation", "AI Model Training", "FinTech"]}
       - {label: "Client", name: "client", widget: "string"}
       - {label: "Duration", name: "duration", widget: "string"}
       - {label: "Location", name: "location", widget: "string"}
@@ -34,6 +30,7 @@ collections:
       - {label: "Overview", name: "overview", widget: "markdown"}
       - {label: "Challenge", name: "challenge", widget: "markdown"}
       - {label: "Solution", name: "solution", widget: "markdown"}
+      - {label: "Results", name: "results", widget: "markdown"}
       - label: "Timeline"
         name: "timeline"
         widget: "list"
@@ -54,7 +51,6 @@ collections:
         fields:
           - {label: "Image", name: "url", widget: "image"}
           - {label: "Alt Text", name: "alt", widget: "string"}
-      - {label: "Results", name: "results", widget: "markdown"}
       - label: "Impact Stats"
         name: "impactStats"
         widget: "list"
@@ -70,7 +66,6 @@ collections:
           - {label: "Name", name: "name", widget: "string"}
           - {label: "Role", name: "role", widget: "string"}
 
-  # Site Settings Collection
   - name: "settings"
     label: "Site Settings"
     files:
@@ -102,7 +97,6 @@ collections:
               - {label: "LinkedIn", name: "linkedin", widget: "string", required: false}
               - {label: "Twitter", name: "twitter", widget: "string", required: false}
               - {label: "GitHub", name: "github", widget: "string", required: false}
-      
       - label: "SEO Settings"
         name: "seo"
         file: "content/settings/seo.yml"
@@ -114,7 +108,6 @@ collections:
           - {label: "Google Analytics ID", name: "googleAnalyticsId", widget: "string", required: false}
           - {label: "Google Search Console", name: "googleSearchConsole", widget: "string", required: false}
 
-  # Portfolio Content Collection
   - name: "portfolio"
     label: "Portfolio Content"
     files:
@@ -140,14 +133,3 @@ collections:
                 fields:
                   - {label: "Skill Name", name: "name", widget: "string"}
                   - {label: "Percentage", name: "percentage", widget: "number", min: 0, max: 100}
-
-# Site configuration
-site_url: https://your-site.netlify.app
-display_url: https://your-site.netlify.app
-logo_url: https://your-site.netlify.app/images/logo.png
-
-# Editorial workflow (optional)
-publish_mode: editorial_workflow
-
-# Local development
-local_backend: true

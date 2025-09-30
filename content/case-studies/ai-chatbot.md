@@ -6,7 +6,7 @@ client: "TechCorp Ghana"
 duration: "4 months"
 location: "Accra, Ghana"
 teamSize: "6 people"
-heroImage: "/images/ai-chatbot/hero.jpg"
+heroImage: "images/ai-chatbot/hero.jpg"
 featured: true
 date: 2024-09-15T00:00:00.000Z
 stats:
@@ -18,6 +18,43 @@ stats:
     label: "Annual Savings"
   - number: "24/7"
     label: "Availability"
+overview: |
+  TechCorp Ghana, a leading technology solutions provider in West Africa, was struggling with overwhelming customer service demands. Their human support team was receiving over 500 inquiries daily, leading to response delays of 4-6 hours and declining customer satisfaction scores.
+
+  I was brought in to design and implement an AI-powered chatbot solution that could handle routine inquiries automatically while seamlessly escalating complex issues to human agents. The project required careful analysis of customer communication patterns, natural language processing implementation, and integration with existing CRM systems.
+
+  ### Key Objectives
+
+  - Reduce average response time from hours to minutes
+  - Handle 80% of routine inquiries automatically
+  - Maintain high customer satisfaction during the transition
+  - Integrate seamlessly with existing support workflows
+  - Support multiple local languages (English, Twi, Ga)
+challenge: |
+  The main challenges included:
+
+  - **Language Complexity:** Customers communicated in multiple local languages with varying dialects and informal expressions.
+  - **Context Understanding:** Technical support queries required understanding of complex product relationships and troubleshooting flows.
+  - **Integration Complexity:** The solution needed to integrate with 5 different systems including CRM, ticketing, and inventory management.
+  - **Staff Resistance:** The support team was initially concerned about job security and workflow changes.
+  - **Data Quality:** Historical support data was inconsistent and poorly categorized, making training challenging.
+solution: |
+  I developed a comprehensive AI chatbot solution with the following components:
+
+  - **Multi-language NLP Engine:** Custom-trained models for English, Twi, and Ga languages with local context understanding.
+  - **Intelligent Routing System:** Smart escalation logic that routes complex queries to appropriate specialists.
+  - **Knowledge Base Integration:** Dynamic connection to product documentation and troubleshooting guides.
+  - **Sentiment Analysis:** Real-time emotion detection to prioritize urgent or frustrated customers.
+  - **Continuous Learning:** Machine learning pipeline that improves responses based on customer feedback.
+  - **Staff Training Program:** Comprehensive training for support agents on working alongside AI systems.
+results: |
+  The AI chatbot implementation exceeded all expectations and delivered transformative results for TechCorp Ghana:
+
+  **Operational Efficiency:** The chatbot now handles 82% of all customer inquiries automatically, reducing the workload on human agents and allowing them to focus on complex technical issues that require human expertise.
+
+  **Customer Experience:** Average response time dropped from 4-6 hours to under 30 seconds for routine inquiries. Customer satisfaction scores improved from 3.2/5 to 4.5/5, with particular praise for the 24/7 availability and multilingual support.
+
+  **Business Impact:** The company saved approximately $200,000 annually in support costs while improving service quality. The solution also enabled them to scale customer support without proportionally increasing staff.
 timeline:
   - date: "Week 1-2"
     title: "Discovery & Analysis"
@@ -48,11 +85,11 @@ technologies:
   - icon: "fas fa-chart-bar"
     name: "Analytics"
 gallery:
-  - url: "/images/ai-chatbot/chatbot-analytics-dashboard.jpg"
+  - url: "images/ai-chatbot/chatbot-analytics-dashboard.jpg"
     alt: "Chatbot Analytics Dashboard"
-  - url: "/images/ai-chatbot/nlp-training-interface.jpg"
+  - url: "images/ai-chatbot/nlp-training-interface.jpg"
     alt: "NLP Training Interface"
-  - url: "/images/ai-chatbot/customer-conversation-flow.jpg"
+  - url: "images/ai-chatbot/customer-conversation-flow.jpg"
     alt: "Customer Conversation Flow"
 impactStats:
   - number: "500+"
@@ -68,48 +105,3 @@ testimonial:
   name: "Kwame Asante"
   role: "Operations Director, TechCorp Ghana"
 ---
-
-## Overview
-
-TechCorp Ghana, a leading technology solutions provider in West Africa, was struggling with overwhelming customer service demands. Their human support team was receiving over 500 inquiries daily, leading to response delays of 4-6 hours and declining customer satisfaction scores.
-
-I was brought in to design and implement an AI-powered chatbot solution that could handle routine inquiries automatically while seamlessly escalating complex issues to human agents. The project required careful analysis of customer communication patterns, natural language processing implementation, and integration with existing CRM systems.
-
-### Key Objectives
-
-- Reduce average response time from hours to minutes
-- Handle 80% of routine inquiries automatically
-- Maintain high customer satisfaction during the transition
-- Integrate seamlessly with existing support workflows
-- Support multiple local languages (English, Twi, Ga)
-
-## The Challenge
-
-The main challenges included:
-
-- **Language Complexity:** Customers communicated in multiple local languages with varying dialects and informal expressions.
-- **Context Understanding:** Technical support queries required understanding of complex product relationships and troubleshooting flows.
-- **Integration Complexity:** The solution needed to integrate with 5 different systems including CRM, ticketing, and inventory management.
-- **Staff Resistance:** The support team was initially concerned about job security and workflow changes.
-- **Data Quality:** Historical support data was inconsistent and poorly categorized, making training challenging.
-
-## The Solution
-
-I developed a comprehensive AI chatbot solution with the following components:
-
-- **Multi-language NLP Engine:** Custom-trained models for English, Twi, and Ga languages with local context understanding.
-- **Intelligent Routing System:** Smart escalation logic that routes complex queries to appropriate specialists.
-- **Knowledge Base Integration:** Dynamic connection to product documentation and troubleshooting guides.
-- **Sentiment Analysis:** Real-time emotion detection to prioritize urgent or frustrated customers.
-- **Continuous Learning:** Machine learning pipeline that improves responses based on customer feedback.
-- **Staff Training Program:** Comprehensive training for support agents on working alongside AI systems.
-
-## Results
-
-The AI chatbot implementation exceeded all expectations and delivered transformative results for TechCorp Ghana:
-
-**Operational Efficiency:** The chatbot now handles 82% of all customer inquiries automatically, reducing the workload on human agents and allowing them to focus on complex technical issues that require human expertise.
-
-**Customer Experience:** Average response time dropped from 4-6 hours to under 30 seconds for routine inquiries. Customer satisfaction scores improved from 3.2/5 to 4.5/5, with particular praise for the 24/7 availability and multilingual support.
-
-**Business Impact:** The company saved approximately $200,000 annually in support costs while improving service quality. The solution also enabled them to scale customer support without proportionally increasing staff.
