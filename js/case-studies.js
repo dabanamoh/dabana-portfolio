@@ -194,24 +194,34 @@ function initializeFiltering() {
 function filterCaseStudies(filterValue) {
     const caseCards = document.querySelectorAll('.case-card');
     
+    console.log(`Filtering by: ${filterValue}`);
+    console.log(`Found ${caseCards.length} case cards`);
+    
     caseCards.forEach(card => {
         const cardCategory = card.getAttribute('data-category');
+        console.log(`Card category: ${cardCategory}, Filter: ${filterValue}`);
         
         if (filterValue === 'all' || cardCategory === filterValue) {
-            // Show card with animation
+            // Show card with proper visibility
             card.style.display = 'block';
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
             card.classList.remove('hide');
             
-            // Trigger reflow and add animation
-            setTimeout(() => {
-                card.style.animation = 'fadeIn 0.5s ease';
-            }, 10);
+            // Add fade-in animation
+            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            console.log(`Showing card: ${cardCategory}`);
         } else {
-            // Hide card
+            // Hide card with animation
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
             card.classList.add('hide');
+            
             setTimeout(() => {
                 card.style.display = 'none';
             }, 300);
+            console.log(`Hiding card: ${cardCategory}`);
         }
     });
     
@@ -237,7 +247,13 @@ function initializeCaseAnimations() {
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.animation = 'fadeIn 0.6s ease forwards';
+                const card = entry.target;
+                // Only animate if the card is visible (not filtered out)
+                if (!card.classList.contains('hide') && card.style.display !== 'none') {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                }
                 observer.unobserve(entry.target);
             }
         });
@@ -246,12 +262,11 @@ function initializeCaseAnimations() {
     // Observe all case cards
     const caseCards = document.querySelectorAll('.case-card');
     caseCards.forEach((card, index) => {
-        // Add initial hidden state
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(30px)';
-        
-        // Add staggered delay
-        card.style.animationDelay = `${index * 0.1}s`;
+        // Only set initial hidden state if card is not explicitly hidden by filter
+        if (!card.classList.contains('hide') && card.style.display !== 'none') {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+        }
         
         observer.observe(card);
     });

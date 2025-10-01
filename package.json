@@ -1,4 +1,22 @@
 {
+  "name": "dabana-portfolio",
+  "version": "1.0.0",
+  "description": "Mohammed Dabana's Portfolio Website with Decap CMS",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 8000 -c-1",
+    "cms-server": "npx decap-server",
+    "dev": "concurrently \"npm run start\" \"npm run cms-server\"",
+    "build": "echo 'Static site - no build step required'"
+  },
+  "keywords": [
+    "portfolio",
+    "cms",
+    "decap",
+    "static-site"
+  ],
+  "author": "Mohammed Dabana",
+  "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
     "decap-server": "^3.3.1",
@@ -6,5 +24,13 @@
     "js-yaml": "^4.1.0",
     "marked": "^9.1.2",
     "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "http-server": "^14.1.1"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
   }
 }

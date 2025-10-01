@@ -2,9 +2,14 @@ backend:
   name: git-gateway
   branch: main
 
-local_backend: true
+# Production: remove local_backend for deployment
+# local_backend: true
+
+site_url: https://dabanamoh.github.io/dabana-portfolio
+display_url: https://dabanamoh.github.io/dabana-portfolio
 
 media_folder: "images/uploads"
+public_folder: "/images/uploads"
 public_folder: "/images/uploads"
 
 collections:
@@ -16,14 +21,14 @@ collections:
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Subtitle", name: "subtitle", widget: "text"}
-      - {label: "Category", name: "category", widget: "select", options: ["AI Automation", "Product Management", "Design Consultation", "AI Model Training", "FinTech"]}
+      - {label: "Category", name: "category", widget: "string"}
       - {label: "Client", name: "client", widget: "string"}
       - {label: "Duration", name: "duration", widget: "string"}
       - {label: "Location", name: "location", widget: "string"}
       - {label: "Team Size", name: "teamSize", widget: "string"}
       - {label: "Hero Image", name: "heroImage", widget: "image"}
       - {label: "Featured", name: "featured", widget: "boolean", default: false}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Date", name: "date", widget: "datetime"}
       - label: "Stats"
         name: "stats"
         widget: "list"
@@ -52,7 +57,7 @@ collections:
         widget: "list"
         required: false
         fields:
-          - {label: "Image", name: "url", widget: "image"}
+          - {label: "Image URL", name: "url", widget: "image"}
           - {label: "Alt Text", name: "alt", widget: "string"}
       - label: "Impact Stats"
         name: "impactStats"
@@ -68,71 +73,3 @@ collections:
           - {label: "Quote", name: "quote", widget: "text"}
           - {label: "Name", name: "name", widget: "string"}
           - {label: "Role", name: "role", widget: "string"}
-
-  - name: "settings"
-    label: "Site Settings"
-    files:
-      - label: "Global Settings"
-        name: "global"
-        file: "content/settings/global.yml"
-        fields:
-          - {label: "Site Title", name: "siteTitle", widget: "string"}
-          - {label: "Site Description", name: "siteDescription", widget: "text"}
-          - {label: "Site URL", name: "siteUrl", widget: "string"}
-          - label: "Theme Colors"
-            name: "themeColors"
-            widget: "object"
-            fields:
-              - {label: "Primary Color", name: "primary", widget: "color", default: "#007bff"}
-              - {label: "Secondary Color", name: "secondary", widget: "color", default: "#6c757d"}
-              - {label: "Accent Color", name: "accent", widget: "color", default: "#28a745"}
-          - label: "Contact Information"
-            name: "contact"
-            widget: "object"
-            fields:
-              - {label: "Phone", name: "phone", widget: "string"}
-              - {label: "Email", name: "email", widget: "string"}
-              - {label: "Location", name: "location", widget: "string"}
-          - label: "Social Media"
-            name: "social"
-            widget: "object"
-            fields:
-              - {label: "LinkedIn", name: "linkedin", widget: "string", required: false}
-              - {label: "Twitter", name: "twitter", widget: "string", required: false}
-              - {label: "GitHub", name: "github", widget: "string", required: false}
-      - label: "SEO Settings"
-        name: "seo"
-        file: "content/settings/seo.yml"
-        fields:
-          - {label: "Meta Title", name: "metaTitle", widget: "string"}
-          - {label: "Meta Description", name: "metaDescription", widget: "text"}
-          - {label: "Meta Keywords", name: "metaKeywords", widget: "string"}
-          - {label: "Open Graph Image", name: "ogImage", widget: "image"}
-          - {label: "Google Analytics ID", name: "googleAnalyticsId", widget: "string", required: false}
-          - {label: "Google Search Console", name: "googleSearchConsole", widget: "string", required: false}
-
-  - name: "portfolio"
-    label: "Portfolio Content"
-    files:
-      - label: "Home Page"
-        name: "home"
-        file: "content/pages/home.yml"
-        fields:
-          - {label: "Hero Title", name: "heroTitle", widget: "string"}
-          - {label: "Hero Subtitle", name: "heroSubtitle", widget: "string"}
-          - {label: "Hero Description", name: "heroDescription", widget: "text"}
-          - {label: "Hero Secondary Text", name: "heroSecondary", widget: "text"}
-          - {label: "Profile Image", name: "profileImage", widget: "image"}
-          - {label: "About Quote", name: "aboutQuote", widget: "text"}
-          - {label: "About Description", name: "aboutDescription", widget: "text"}
-          - label: "Skills"
-            name: "skills"
-            widget: "list"
-            fields:
-              - {label: "Category", name: "category", widget: "string"}
-              - label: "Skills List"
-                name: "skillsList"
-                widget: "list"
-                fields:
-                  - {label: "Skill Name", name: "name", widget: "string"}
-                  - {label: "Percentage", name: "percentage", widget: "number", min: 0, max: 100}

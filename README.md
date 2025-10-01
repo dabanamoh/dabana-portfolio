@@ -1,60 +1,62 @@
 # Mohammed Dabana - Portfolio Website
 
-A modern, responsive portfolio website showcasing expertise in Product Management and AI solutions across Kenya, Ghana, and Nigeria.
+A modern, responsive portfolio website for Mohammed Dabana featuring case studies, projects, and professional experience. Built with vanilla HTML, CSS, and JavaScript, integrated with Decap CMS for easy content management.
 
 ## 🌟 Features
 
-- **Responsive Design**: Optimized for all devices and screen sizes
-- **Modern UI/UX**: Clean, professional design with smooth animations
-- **Case Studies**: Detailed project showcases with metrics and outcomes
-- **Contact Integration**: Direct email and consultation booking
-- **Fast Performance**: Optimized loading and smooth user experience
-- **CMS Integration**: Decap CMS for easy content management
+- **Responsive Design**: Mobile-first design that works on all devices
+- **Case Studies**: Detailed project showcases with interactive elements
+- **Content Management**: Integrated Decap CMS for easy content updates
+- **Modern UI**: Clean, professional design with smooth animations
+- **Fast Loading**: Optimized static site for best performance
+- **SEO Optimized**: Proper meta tags and semantic HTML structure
 
-## 🛠 Tech Stack
+## 🚀 Live Demo
+
+Visit the live website: [https://dabanamoh.github.io/dabana-portfolio](https://dabanamoh.github.io/dabana-portfolio)
+
+## 🛠️ Technologies Used
 
 - **Frontend**: HTML5, CSS3, JavaScript (ES6+)
-- **Styling**: Custom CSS with responsive design patterns
-- **Content Management**: Decap CMS
-- **Server**: Node.js with Express
+- **Styling**: Custom CSS with CSS Grid and Flexbox
+- **CMS**: Decap CMS (formerly Netlify CMS)
 - **Fonts**: Inter font family from Google Fonts
-- **Icons**: Font Awesome 6
+- **Icons**: Font Awesome icons
+- **Hosting**: GitHub Pages
 
 ## 📁 Project Structure
 
 ```
-├── admin/                  # CMS admin interface
-│   ├── index.html         # CMS admin panel
-│   └── config.yml         # CMS configuration
-├── content/               # CMS content files
-│   ├── case-studies/      # Markdown case studies
-│   ├── settings/          # Site configuration
-│   └── pages/             # Page content
-├── css/                   # Stylesheets
-│   ├── style.css          # Main styles
+├── index.html              # Homepage
+├── case-studies.html       # Case studies listing page
+├── case-study-detail.html  # Individual case study page
+├── css/
+│   ├── style.css          # Main stylesheet
 │   ├── case-studies.css   # Case studies page styles
-│   └── case-study-detail.css # Individual case study styles
-├── js/                    # JavaScript files
-│   ├── main.js            # Main application logic
-│   ├── cms-loader.js      # CMS content loader
-│   ├── case-studies.js    # Case studies functionality
-│   ├── case-studies-data.js # Static case studies data
-│   └── case-study-detail.js # Case study detail page
-├── images/                # Image assets
-│   └── uploads/           # CMS uploaded images
-├── index.html             # Homepage
-├── case-studies.html      # Case studies listing
-├── case-study-detail.html # Case study detail template
-├── preview-server.js      # Development server
-└── package.json           # Dependencies
+│   └── case-study-detail.css # Case study detail styles
+├── js/
+│   ├── main.js           # Main JavaScript functionality
+│   ├── case-studies.js   # Case studies page logic
+│   ├── case-study-detail.js # Case study detail logic
+│   └── cms-loader.js     # CMS content loader
+├── admin/
+│   ├── index.html        # CMS admin interface
+│   ├── config.yml        # CMS configuration
+│   ├── cms-styles.css    # CMS styling
+│   └── cms-init.js       # CMS initialization
+├── content/
+│   ├── case-studies/     # Case study markdown files
+│   ├── settings/         # Site settings
+│   └── pages/           # Page content
+└── images/              # Image assets
 ```
 
-## 🚀 Getting Started
+## 🚀 Quick Start
 
 ### Prerequisites
 
-- Node.js (v14 or higher)
-- npm or yarn
+- Node.js (v18 or higher)
+- npm (v8 or higher)
 
 ### Installation
 
@@ -71,68 +73,103 @@ npm install
 
 3. Start the development server:
 ```bash
-node preview-server.js
+npm run dev
 ```
 
 4. Open your browser and navigate to:
    - Website: `http://localhost:8000`
-   - CMS Admin: `http://localhost:8000/admin/`
+   - CMS Admin: `http://localhost:8000/admin`
+
+### Production Build
+
+For production deployment:
+
+```bash
+npm run build
+```
 
 ## 📝 Content Management
 
-### Using Decap CMS
+### Using the CMS
 
-1. Access the admin interface at `/admin/`
-2. For local development, use "Working with a Local Git Repository"
-3. Create and edit case studies with rich content
-4. Manage site settings, SEO, and theme configuration
-5. Upload and manage images
+1. Navigate to `/admin` on your live site
+2. Log in with your credentials
+3. Edit case studies, site settings, and page content
+4. Changes are automatically saved to the repository
 
-### Content Types
+### Manual Content Updates
 
-- **Case Studies**: Project showcases with full details
-- **Site Settings**: Global configuration and contact info
-- **SEO Settings**: Meta tags and analytics
-- **Homepage Content**: Hero section and skills
+Case studies are stored as markdown files in `/content/case-studies/`. Each file contains:
+- YAML frontmatter with metadata
+- Markdown content for detailed sections
 
 ## 🎨 Customization
 
-### Styling
-- Edit CSS files in the `/css/` directory
-- Maintain responsive design principles
-- Follow the existing color scheme and typography
+### Colors and Branding
 
-### Content
-- Use the CMS admin interface for content updates
-- Edit markdown files directly in `/content/` if needed
-- Update settings in YAML files for configuration changes
+Primary colors are defined in CSS custom properties:
+- Primary: `#FF6B35` (Orange)
+- Background: `#0F1419` (Dark)
+- Text: `#FFFFFF` (White)
+- Accent: `#A0A0A0` (Gray)
 
-## 📱 Responsive Design
+### Adding New Case Studies
 
-The website is fully responsive and optimized for:
-- Desktop (1200px+)
-- Tablet (768px - 1199px)
-- Mobile (320px - 767px)
+1. Use the CMS admin interface, or
+2. Create a new markdown file in `/content/case-studies/`
+3. Follow the existing file structure for consistency
+
+## 📱 Mobile Responsiveness
+
+The website is fully responsive with breakpoints at:
+- **Desktop**: 1200px and above
+- **Tablet**: 768px - 1199px
+- **Mobile**: 480px - 767px
+- **Small Mobile**: Below 480px
+
+## 🔧 Development
+
+### Scripts
+
+- `npm start` - Start HTTP server only
+- `npm run cms-server` - Start CMS server only
+- `npm run dev` - Start both servers concurrently
+- `npm run build` - Production build (static site)
+
+### Code Quality
+
+- Semantic HTML5 markup
+- Modern CSS with custom properties
+- ES6+ JavaScript features
+- Accessibility best practices
+- Performance optimizations
 
 ## 🚀 Deployment
 
-### Recommended: Netlify
-1. Connect your GitHub repository to Netlify
-2. Set build command: `npm install`
-3. Set publish directory: `./`
-4. Enable Netlify Identity for CMS authentication
+### GitHub Pages
 
-### Alternative Platforms
+1. Push changes to the main branch
+2. Enable GitHub Pages in repository settings
+3. Site deploys automatically
+
+### Other Hosting Platforms
+
+The site works on any static hosting platform:
+- Netlify
 - Vercel
-- GitHub Pages
-- Traditional hosting providers
+- Firebase Hosting
+- AWS S3 + CloudFront
 
-## 📊 Performance
+## 📄 License
 
-- Optimized images with lazy loading
-- Minimal JavaScript for fast loading
-- CSS optimization for smooth animations
-- Mobile-first responsive design
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👨‍💻 Author
+
+**Mohammed Dabana**
+- Portfolio: [dabanamoh.github.io/dabana-portfolio](https://dabanamoh.github.io/dabana-portfolio)
+- LinkedIn: [Mohammed Dabana](https://linkedin.com/in/mohammed-dabana)
+- Email: mohammed@dabana.com
 
 ## 🤝 Contributing
 
@@ -142,20 +179,12 @@ The website is fully responsive and optimized for:
 4. Test thoroughly
 5. Submit a pull request
 
-## 📄 License
+## 📞 Support
 
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 📞 Contact
-
-**Mohammed Dabana**
+For questions or support, please reach out via:
 - Email: mohammed@dabana.com
-- Phone: +254 111 456 789
-- Location: Kenya, Ghana & Nigeria
+- LinkedIn: [Mohammed Dabana](https://linkedin.com/in/mohammed-dabana)
 
-## 🙏 Acknowledgments
+---
 
-- Design inspiration from modern portfolio trends
-- Icons by Font Awesome
-- Fonts by Google Fonts
-- CMS powered by Decap CMS
+© 2024 Mohammed Dabana. All rights reserved.
