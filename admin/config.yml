@@ -10,7 +10,6 @@ display_url: https://dabanamoh.github.io/dabana-portfolio
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
-public_folder: "/images/uploads"
 
 collections:
   - name: "case_studies"
