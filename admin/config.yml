@@ -1,7 +1,9 @@
 backend:
-  name: test-repo
+  name: git-gateway
+  branch: main
 
-local_backend: true
+site_url: https://velvety-valkyrie-efb651.netlify.app
+display_url: https://velvety-valkyrie-efb651.netlify.app
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
