@@ -1,12 +1,7 @@
 backend:
-  name: git-gateway
-  branch: main
+  name: test-repo
 
-# Production: remove local_backend for deployment
-# local_backend: true
-
-site_url: https://dabanamoh.github.io/dabana-portfolio
-display_url: https://dabanamoh.github.io/dabana-portfolio
+local_backend: true
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
